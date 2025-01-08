@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATIC_URL = '/static/'
+
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = '/'
 
@@ -57,7 +59,9 @@ ROOT_URLCONF = 'wordle_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'wordle' /' templates' / 'wordle',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

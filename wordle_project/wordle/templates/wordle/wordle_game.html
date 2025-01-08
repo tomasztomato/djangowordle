@@ -1,13 +1,22 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Wordle Game</title>
-    </head>
-    <body>
-        <h1>Welcome to Wordle!</h1>
-        <p>Start playing the game here!</p>
-        <p><a href="{% url 'logout' %}">Logout</a></p>
-    </body>
-</html>
+{% extends 'wordle/base.html' %} {% block title %} Wordle {% endblock %} {% block content %}
+<h1>Wordle Game</h1>
+{% if guessed_word %}
+<p>Congratulations! You guessed the word: {{ guessed_word }}</p>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    <label for="guess">Enter a 5-letter word:</label>
+    <input type="text" name="guess" id="guess" maxlength="5" required />
+    <button type="submit">Guess</button>
+</form>
+
+{% if result %}
+<p>
+    Result:
+    <span id="result">
+        {% for letter, color in result %}
+        <span class="{{ color }}">{{ letter }}</span>
+        {% endfor %}
+    </span>
+</p>
+{% endif %} {% endblock %}
