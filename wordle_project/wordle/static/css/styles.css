@@ -112,25 +112,27 @@ a:hover {
     margin-top: 30px;
 }
 
-#result span {
+#result span,
+#history span {
     font-weight: bold;
     padding: 5px;
     margin: 0 2px;
     display: inline-block;
 }
 
+#history .g,
 #result .g {
     background-color: green;
     color: white;
     border-radius: 3px;
 }
-
+#history .y,
 #result .y {
     background-color: yellow;
     color: black;
     border-radius: 3px;
 }
-
+#history .r,
 #result .r {
     background-color: red;
     color: white;
