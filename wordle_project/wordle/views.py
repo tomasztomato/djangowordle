@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.hashers import make_password
 
 def register_view(request):
     if request.method == 'POST':
@@ -11,7 +12,8 @@ def register_view(request):
         if User.objects.filter(username=username).exists():
             messages.error(request, 'Username already exists.')
         else:
-            User.objects.create_user(username=username, password=password)
+            hashed_password = make_password(password)
+            User.objects.create_user(username=username, password=hashed_password)
             messages.success(request, 'Registration successful! Please log in.')
             return redirect('login')
     return render(request, 'wordle/register.html')
