@@ -118,7 +118,7 @@ def game_view(request):
             messages.error(request, "Please enter a valid 5-letter word.")
 
     return render(request, 'wordle/wordle_game.html', {
+        'messages': messages,
         'guessed_word': guessed_word,
-        'result': result,
         'guess_history': guess_history[::-1]
     })

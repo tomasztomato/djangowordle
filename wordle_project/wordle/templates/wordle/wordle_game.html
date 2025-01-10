@@ -17,15 +17,10 @@
     <button type="submit" name="refresh_game">Refresh Game</button>
 </form>
 
-{% if result %}
-<p>
-    Result:
-    <span id="result">
-        {% for letter, color in result %}
-        <span class="{{ color }}">{{ letter }}</span>
-        {% endfor %}
-    </span>
-</p>
+{% if messages %}
+<div class="messages">
+    <p class="{{ message.tags }}">{{ message }}</p>
+</div>
 {% endif %} {% if guess_history %}
 <h2>Guess History</h2>
 <ol reversed>

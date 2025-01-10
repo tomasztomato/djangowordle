@@ -1,140 +1,143 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
 }
 
 h1 {
-    margin: 0;
-    padding: 0.5rem;
-    text-align: center;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 nav {
-    background-color: #333;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    width: 100vw;
-    padding: 1rem 0;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100vw;
+  padding: 1rem 0;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-start;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
 }
 
 nav ul li {
-    margin: 15px;
+  margin: 15px;
 }
 
 nav ul li a,
 nav ul li button {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: #444;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #444;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 nav ul li button {
-    background-color: #d9534f;
+  background-color: #d9534f;
 }
 
 nav ul li a:hover,
 nav ul li button:hover {
-    background-color: #5bc0de;
+  background-color: #5bc0de;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    max-width: 400px;
-    padding: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
 }
 
 label {
-    align-self: flex-start;
-    margin-bottom: 0.25rem;
+  align-self: flex-start;
+  margin-bottom: 0.25rem;
 }
 
 input {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 button {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1.2rem;
-    cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 a {
-    color: #007bff;
-    text-decoration: none;
+  color: #007bff;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #wordle-game {
-    text-align: center;
-    margin-top: 30px;
+  text-align: center;
+  margin-top: 30px;
 }
 
-#result span,
 #history span {
-    font-weight: bold;
-    padding: 5px;
-    margin: 0 2px;
-    display: inline-block;
+  font-weight: bold;
+  padding: 0.3rem;
+  margin: 0.2rem 0.2rem;
+  display: inline-block;
+  width: 0.6rem;
+  text-align: center;
 }
 
-#history .g,
-#result .g {
-    background-color: green;
-    color: white;
-    border-radius: 3px;
+#history .g {
+  background-color: green;
+  color: white;
+  border-radius: 3px;
+  border: 0.15rem solid black;
 }
-#history .y,
-#result .y {
-    background-color: yellow;
-    color: black;
-    border-radius: 3px;
+
+#history .y {
+  background-color: yellow;
+  color: black;
+  border-radius: 3px;
+  border: 0.15rem solid black;
 }
-#history .r,
-#result .r {
-    background-color: red;
-    color: white;
-    border-radius: 3px;
+
+#history .r {
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+  border: 0.15rem solid black;
 }
